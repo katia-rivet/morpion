@@ -1,0 +1,59 @@
+h1{
+    color:  rgb(8, 73, 194);
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    
+}
+  
+tr {
+height: 12vw;
+
+}
+
+.tic-panel{
+border: solid 2px black;
+margin: .4vw 0;
+background-image: url(../img/background.png);
+background-size: cover;
+opacity: 0.5
+padding: .4vw;
+border-radius: 25px;
+
+}
+
+.tic-box{
+border: solid black 1px;
+font-size: 5vw;
+background: rgba(148, 4, 23, 0.322);
+text-align: center;
+color: white;
+border-radius: 45px;
+    
+}
+
+.tic-box:hover{
+background: rgba(67, 145, 218, 0.63);
+box-shadow: 5px 5px 110px rgba(5, 35, 117, 0.8) inset;
+
+}
+
+.blue{
+
+    color: blue;
+
+}
+
+.red{
+
+color : maroon;
+
+}
+
+body{
+
+background-color: rgba(0, 116, 248, 0.123)
+
+}

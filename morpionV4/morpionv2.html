@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description de la page">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Custom CSS -->
+    <style>
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+tr {
+  height: 12vw; /* Set this to whatever amount forms square cells */
+}
+.content{
+  margin: .4vw 0;
+  background: lightblue;
+  padding: .4vw;
+}
+.tic-panel{
+  border: solid 2px black;
+  margin: .4vw 0;
+  background: #66A5AD;
+  padding: .4vw;
+}
+
+.tic-box{
+  border: solid black 1px;
+  font-size: 5vw;
+  background: #6AB187;
+  text-align: center;
+  color: white;
+}
+.tic-box:hover{
+  background: #20948B;
+}
+
+/* td:before {
+  content: '';
+  display: block; 
+  width: 50px;
+  height : 50px;
+} */
+/* td {
+  
+ 
+   min-width: 50px; 
+  min-height : 50px;
+} */
+/* .tic-container{
+
+
+  height: 100vh;
+} */
+/* .tic-row{
+
+  height : 25vh;
+} */
+
+    </style>
+
+</head>
+<body onload="afficher()">
+
+    <!-- CONTENT START -->
+    <!-- <div class="container-fluid mb-5">
+        <div class="row">
+       
+    
+          <div class="col-12 col-sm-6 content">
+            <div class="container-fluid tic-container">
+              <div class="row tic-row">
+                <div class="col-4 tic-box" id="box100" onclick="afficher()">I</div>
+                <div class="col-4 tic-box" id="box01" onclick="playMove()">I</div>
+                <div class="col-4 tic-box" id="box02" onclick="playMove()">I</div>
+              </div>
+              <div class="row tic-row">
+                <div class="col-4 tic-box" id="box10" onclick="playMove()">I</div>
+                <div class="col-4 tic-box" id="box11" onclick="playMove()">I</div>
+                <div class="col-4 tic-box" id="box12" onclick="playMove()">I</div>
+              </div>
+              <div class="row tic-row">
+                <div class="col-4 tic-box" id="box20" onclick="playMove()">I</div>
+                <div class="col-4 tic-box" id="box21" onclick="playMove()">I</div>
+                <div class="col-4 tic-box" id="box22" onclick="playMove()">I</div>
+              </div>
+            </div>
+          </div> -->
+          <!-- Alors j'ai donné un id perso à chaque case, qui porte le nom de la position dans
+                le tableau
+             
+            Pour l'instant les cases contiennent toutes un 'I' qui est transparent, pour occuper l'espace.
+            faudrait voir pour que les td du tableau affichent constamment de base le contenu de la vabiable
+            tableauMorpion , et que ca soit transparent si c'est 0 et opaque si c'est 1 ou 2. 
+            Et du coup rien nous empeche de mettre des X et des O dans tableauMorpion, ca hange rien à la
+            logique et ca facilite les choses je pense.
+        
+        
+        
+        
+        -->
+
+        </div>
+    </div>  
+
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center align-items-center">
+       
+    
+          <div class="col-6 content">
+            <div class="container tic-container">
+                <table>
+
+                    <tr class="row tic-row">
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box00" onclick="playMove(0,0)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box01" onclick="playMove(0,1)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box02" onclick="playMove(0,2)"></td>
+                    </tr>
+                    <tr class="row tic-row">
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box10" onclick="playMove(1,0)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box11" onclick="playMove(1,1)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box12" onclick="playMove(1,2)"></td>
+                    </tr>
+                    <tr class="row tic-row">
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box20" onclick="playMove(2,0)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box21" onclick="playMove(2,1)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box22" onclick="playMove(2,2)"></td>
+                    </tr>
+                    
+                </table>
+            </div>
+          </div>
+          <div class="row col-12 d-flex justify-content-center align-items-center">
+
+            <h3>
+
+              <span id="spanny"> C'est au Joueur 1 de commencer : X </span>
+
+            </h3>
+
+
+          </div>
+<!-- <button onclick="afficher()">COMMENCER</button> -->
+<body>
+      
+
+    <!-- CONTENT END -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/morpion3.js"></script>
+</body>
+</html>

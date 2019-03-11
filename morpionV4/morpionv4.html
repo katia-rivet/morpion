@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description de la page">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Morpion</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/stylev4.css">
+    
+    <!-- Custom CSS -->
+    <style> </style>
+    
+</head>
+<body onload="afficher()">
+      
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center align-items-center">
+        
+        <div class="col-12 text-center"><h1 class="py-3">Morpion</h1></div>
+        
+        <div class="col-6 tic-panel">
+            <div class="container">
+                <table class="tableGame">
+                    
+                    <tr class="row tic-row">
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box00" onclick="playMove(0,0)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box01" onclick="playMove(0,1)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box02" onclick="playMove(0,2)"></td>
+                    </tr>
+                    <tr class="row tic-row">
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box10" onclick="playMove(1,0)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box11" onclick="playMove(1,1)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box12" onclick="playMove(1,2)"></td>
+                    </tr>
+                    <tr class="row tic-row">
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box20" onclick="playMove(2,0)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box21" onclick="playMove(2,1)"></td>
+                        <td class="col-4 tic-box d-flex justify-content-center align-items-center" id="box22" onclick="playMove(2,2)"></td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        <div class="row col-12 d-flex justify-content-center align-items-center">
+            
+            <h3>
+                
+                <h3 id="spanny"> C'est au Joueur 1 de commencer : <span class='blue'>X</span> </h3>
+                
+            </h3>
+            
+            
+        </div>
+
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center align-items-center">
+                
+                <div class="col-12 text-center"><h1 class="py-3">Scores</h1></div>
+                
+                <div class="col-6 score-panel">
+                    <div class="container">
+                        <table class="tableScore">
+                            
+                            <tr class="row tic-row">
+                                <td class="col-4 score-box d-flex justify-content-center align-items-center" >Joueur 1 : <br> <span class='blue'>X</span></td>
+                                <td class="col-4 score-box d-flex justify-content-center align-items-center" >Joueur 2 : <br> <span class='red'>O</span></td>
+                                <td class="col-4 score-box d-flex justify-content-center align-items-center" >PAT : </td>
+                                
+                            </tr>
+                            <tr class="row tic-row">
+                                <td class="col-4 score-box d-flex justify-content-center align-items-center" id="scoreX"></td>
+                                <td class="col-4 score-box d-flex justify-content-center align-items-center" id="scoreO"></td>
+                                <td class="col-4 score-box d-flex justify-content-center align-items-center" id="scorePat"></td>
+                            </tr>
+                            
+                            
+                        </table>
+                    </div>
+                </div>
+
+
+        
+        
+        
+        
+        <!-- CONTENT END -->
+        
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Custom JS -->
+        <script src="js/main.js"></script>
+        <script src="js/morpionv4.js"></script>
+    </body>
+</html>

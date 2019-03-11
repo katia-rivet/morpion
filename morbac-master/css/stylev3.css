@@ -1,0 +1,39 @@
+h1{
+    color:  rgb(148, 4, 23);
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    
+}
+  
+tr {
+height: 12vw;
+
+}
+
+.tic-panel{
+border: solid 2px black;
+margin: .4vw 0;
+background: rgb(128, 125, 125);
+padding: .4vw;
+border-radius: 25px;
+
+}
+
+.tic-box{
+border: solid black 1px;
+font-size: 5vw;
+background: rgba(148, 4, 23, 0.575);
+text-align: center;
+color: white;
+border-radius: 45px;
+    
+}
+
+.tic-box:hover{
+background: rgba(218, 67, 67, 0.63);
+box-shadow: 5px 5px 110px rgba(88, 3, 14, 0.8) inset;
+
+}
